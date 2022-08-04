@@ -6,23 +6,36 @@
 
 :root {
 	--color-text: white;
-	--color-primary: #a81759; /* Used for highlights */
-	--color-secondary: #171633; /* Used for backdrops of elements */
-	--color-tertiary: #111025; /* Used for the backdrop of the entire page */
+	--color-primary: #dd4444; /* Used for highlights */
+	--color-secondary: #bb3333; /* Used for backdrops of elements */
+	--color-tertiary: #222222; /* Used for the backdrop of the entire page */
 	--gradient-primary: linear-gradient(
-		45deg,
-		var(--color-primary) 0%,
-		#a81796 35%,
-		#6c17a8 65%,
-		#3917a8 100%
-	); /* Used for highlights */
+		225deg,
+		hsl(0deg 69% 57%) 0%,
+		hsl(16deg 67% 52%) 10%,
+		hsl(29deg 71% 46%) 20%,
+		hsl(41deg 72% 43%) 30%,
+		hsl(53deg 59% 42%) 40%,
+		hsl(71deg 44% 46%) 50%,
+		hsl(96deg 38% 54%) 60%,
+		hsl(132deg 42% 60%) 70%,
+		hsl(156deg 54% 57%) 80%,
+		hsl(171deg 64% 56%) 90%,
+		hsl(180deg 69% 57%) 100%
+	  ); /* Used for highlights */
 	--gradient-secondary: linear-gradient(
 		45deg,
-		var(--color-secondary) 0%,
-		#251633 35%,
-		#2c1633 65%,
-		#421531 100%
-	); /* Used for backdrops of elements */
+		hsl(0deg 57% 47%) 0%,
+		hsl(19deg 70% 41%) 11%,
+		hsl(33deg 82% 36%) 22%,
+		hsl(45deg 79% 33%) 33%,
+		hsl(61deg 56% 34%) 44%,
+		hsl(84deg 40% 42%) 56%,
+		hsl(120deg 26% 50%) 67%,
+		hsl(153deg 40% 48%) 78%,
+		hsl(170deg 54% 46%) 89%,
+		hsl(180deg 57% 47%) 100%
+	  ); /* Used for backdrops of elements */
 
 	--gap: 1rem;
 
@@ -144,6 +157,11 @@ h3 {
 	outline-style: solid;
 }
 
+.grid-element img {
+	margin-right: var(--gap);
+	/* transform: scale(0.675); */
+}
+
 .grid-element svg {
 	margin-right: var(--gap);
 	transform: scale(1.35);
@@ -181,5 +199,9 @@ h3 {
 	width: 100%;
 	font-size: 1rem;
 	border: none;
+	color: var(--color-text);
+}
+
+::placeholder {
 	color: var(--color-text);
 }
