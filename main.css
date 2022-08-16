@@ -10,31 +10,32 @@
 	--color-secondary: #bb3333; /* Used for backdrops of elements */
 	--color-tertiary: #222222; /* Used for the backdrop of the entire page */
 	--gradient-primary: linear-gradient(
-		225deg,
-		hsl(0deg 69% 57%) 0%,
-		hsl(16deg 67% 52%) 10%,
-		hsl(29deg 71% 46%) 20%,
-		hsl(41deg 72% 43%) 30%,
-		hsl(53deg 59% 42%) 40%,
-		hsl(71deg 44% 46%) 50%,
-		hsl(96deg 38% 54%) 60%,
-		hsl(132deg 42% 60%) 70%,
-		hsl(156deg 54% 57%) 80%,
-		hsl(171deg 64% 56%) 90%,
-		hsl(180deg 69% 57%) 100%
+		45deg,
+		hsl(302deg 60% 34%) 0%,
+		hsl(316deg 69% 38%) 20%,
+		hsl(325deg 73% 42%) 29%,
+		hsl(333deg 71% 47%) 36%,
+		hsl(342deg 72% 53%) 43%,
+		hsl(352deg 79% 58%) 50%,
+		hsl(358deg 83% 61%) 57%,
+		hsl(5deg 86% 61%) 64%,
+		hsl(11deg 88% 59%) 71%,
+		hsl(17deg 89% 57%) 80%,
+		hsl(23deg 89% 54%) 100%
 	  ); /* Used for highlights */
 	--gradient-secondary: linear-gradient(
-		45deg,
-		hsl(0deg 57% 47%) 0%,
-		hsl(19deg 70% 41%) 11%,
-		hsl(33deg 82% 36%) 22%,
-		hsl(45deg 79% 33%) 33%,
-		hsl(61deg 56% 34%) 44%,
-		hsl(84deg 40% 42%) 56%,
-		hsl(120deg 26% 50%) 67%,
-		hsl(153deg 40% 48%) 78%,
-		hsl(170deg 54% 46%) 89%,
-		hsl(180deg 57% 47%) 100%
+		225deg,
+		hsl(302deg 60% 34%) 0%,
+		hsl(316deg 69% 38%) 20%,
+		hsl(325deg 73% 42%) 29%,
+		hsl(333deg 71% 47%) 36%,
+		hsl(342deg 72% 53%) 43%,
+		hsl(352deg 79% 58%) 50%,
+		hsl(358deg 83% 61%) 57%,
+		hsl(5deg 86% 61%) 64%,
+		hsl(11deg 88% 59%) 71%,
+		hsl(17deg 89% 57%) 80%,
+		hsl(23deg 89% 54%) 100%
 	  ); /* Used for backdrops of elements */
 
 	--gap: 1rem;
