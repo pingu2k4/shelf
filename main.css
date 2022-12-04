@@ -100,12 +100,22 @@ h3 {
 
 .grid-rows {
 	display: grid;
-	grid-template-rows: auto;
+	grid-template-rows: 2.5rem auto;
 	gap: var(--gap);
 }
 
 .grid-heading {
-	padding-top: 3.65em;
+	padding-top: 0.65rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.grid-heading h2 {
+	color: transparent;
+	background-image: var(--gradient-secondary);
+	background-clip: text;
+	-webkit-background-clip: text;
+	font-weight: 900;
 }
 
 .grid-element {
