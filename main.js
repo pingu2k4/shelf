@@ -1,16 +1,16 @@
-const searchForm = document.querySelector("#search");
-const searchBar = searchForm[0];
-const searchEngine = "https://google.com/search?q=";
-searchBar.focus();
-searchForm.onsubmit = (e) => {
-	e.preventDefault();
-	const query = searchBar.value.replace(/ /g, "+");
-	if (validURL(query)) {
-		if (!query.startsWith("https://"))
-			return (window.location.href = "https://" + query);
-		else window.location.href = query;
-	} else return (window.location.href = "" + searchEngine + query);
-};
+//const searchForm = document.querySelector("#search");
+//const searchBar = searchForm[0];
+//const searchEngine = "https://google.com/search?q=";
+//searchBar.focus();
+// searchForm.onsubmit = (e) => {
+// 	e.preventDefault();
+// 	const query = searchBar.value.replace(/ /g, "+");
+// 	if (validURL(query)) {
+// 		if (!query.startsWith("https://"))
+// 			return (window.location.href = "https://" + query);
+// 		else window.location.href = query;
+// 	} else return (window.location.href = "" + searchEngine + query);
+// };
 function validURL(str) {
 	var pattern = new RegExp(
 		"^(https?:\\/\\/)?" +
