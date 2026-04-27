@@ -5,133 +5,158 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" type="image/svg" href="favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300..600&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="main.css" />
 		<title>Shelf</title>
 	</head>
 	<body>
-		<main>
-			<section>
-				<div id="time">12:00</div>
+		<main class="shell">
+			<section class="clock-panel" aria-label="Current time">
+				<div class="time-row">
+					<div id="time">00:00</div>
+					<span class="cursor-block" aria-hidden="true"></span>
+				</div>
+				<div id="date">JAN.01.2026</div>
 			</section>
-			<!-- <section>
-				<form id="search">
-					<input class="grid-element" type="search"
-						placeholder="Search with Google or enter an address..."></input>
-				</form>
-			</section> -->
-			<section class="grid-columns">
-				<div class="grid-rows">
-					<div class="grid-heading">
-						<h2>Pinned Tabs</h2>
+
+			<section class="bookmark-grid" aria-label="Bookmarks">
+				<div class="bookmark-group bookmark-group--cyan">
+					<div class="group-heading">
+						<span class="material-symbols-outlined" aria-hidden="true">push_pin</span>
+						<h2>Pinned</h2>
 					</div>
-					<a href="https://www.youtube.com/feed/subscriptions" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=48" />
-						<h3>YouTube</h3>
-					</a>
-					<a href="https://www.familywall.com/events.php" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=familywall.com&sz=48" />
-						<h3>Family Wall</h3>
-					</a>
-					<a href="https://app.clockify.me/tracker" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=clockify.me&sz=48" />
-						<h3>Clockify</h3>
-					</a>
-					<a href="https://news.ycombinator.com/show" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=ycombinator.com&sz=48" />
-						<h3>Hacker News</h3>
-					</a>
-					<a href="https://habitica.com/" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=habitica.com&sz=48" />
-						<h3>Habitica</h3>
-					</a>
+					<ul>
+						<li>
+							<a href="https://www.youtube.com/feed/subscriptions" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=48" alt="" />
+								<span>YouTube</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.familywall.com/events.php" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=familywall.com&sz=48" alt="" />
+								<span>Family Wall</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://app.clockify.me/tracker" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=clockify.me&sz=48" alt="" />
+								<span>Clockify</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://news.ycombinator.com/show" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=ycombinator.com&sz=48" alt="" />
+								<span>Hacker News</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://habitica.com/" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=habitica.com&sz=48" alt="" />
+								<span>Habitica</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 
-				<!-- <div class="grid-rows">
-					<div class="grid-heading">
-						<h2>Socials</h2>
+				<div class="bookmark-group">
+					<div class="group-heading">
+						<span class="material-symbols-outlined" aria-hidden="true">category</span>
+						<h2>Misc</h2>
 					</div>
-					<a href="https://www.revid.ai/projects" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=revid.ai&sz=48" />
-						<h3>Revid</h3>
-					</a>
-					<a href="https://app.publer.io/#" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=publer.io&sz=48" />
-						<h3>Publer</h3>
-					</a>
-					<a href="https://quack.uglyduckling.app/dashboard?timeframe=7D" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=uglyduckling.app&sz=48" />
-						<h3>Ugly Duckling</h3>
-					</a>
-					<a href="https://www.tiktok.com/@pingu2k6" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=tiktok.com&sz=48" />
-						<h3>Tiktok</h3>
-					</a>
-					<a href="https://www.twitter.com/" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=twitter.com&sz=48" />
-						<h3>Twitter</h3>
-					</a>
-				</div> -->
-				<div class="grid-rows">
-					<div class="grid-heading">
-						<h2>Miscellaneous</h2>
-					</div>
-					<a href="https://bookmarkjar.com/dashboard/bookmarks" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=bookmarkjar.com&sz=48" />
-						<h3>Bookmark Jar</h3>
-					</a>
-					<a href="https://www.namecheap.com/market/auctions/" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=namecheap.com&sz=48" />
-						<h3>NC Auctions</h3>
-					</a>
-					<a href="https://www.producthunt.com/" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=producthunt.com&sz=48" />
-						<h3>Product Hunt</h3>
-					</a>
+					<ul>
+						<li>
+							<a href="https://bookmarkjar.com/dashboard/bookmarks" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=bookmarkjar.com&sz=48" alt="" />
+								<span>Bookmark Jar</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.namecheap.com/market/auctions/" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=namecheap.com&sz=48" alt="" />
+								<span>NC Auctions</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.producthunt.com/" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=producthunt.com&sz=48" alt="" />
+								<span>Product Hunt</span>
+							</a>
+						</li>
+					</ul>
 				</div>
-				<div class="grid-rows">
-					<div class="grid-heading">
+
+				<div class="bookmark-group bookmark-group--purple">
+					<div class="group-heading">
+						<span class="material-symbols-outlined" aria-hidden="true">psychology</span>
 						<h2>AI</h2>
 					</div>
-					<a href="https://claude.ai/new" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=claude.ai&sz=48" style="background-color: #222;" />
-						<h3>Claude</h3>
-					</a>
-					<a href="https://v0.dev" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=v0.dev&sz=48" />
-						<h3>V0</h3>
-					</a>
-					<a href="https://t3.chat" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=t3.chat&sz=48" />
-						<h3>T3 Chat</h3>
-					</a>
-					<a href="https://chat.openai.com" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=openai.com&sz=48" />
-						<h3>ChatGPT</h3>
-					</a>
+					<ul>
+						<li>
+							<a href="https://claude.ai/new" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=claude.ai&sz=48" alt="" />
+								<span>Claude</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://v0.dev" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=v0.dev&sz=48" alt="" />
+								<span>V0</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://t3.chat" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=t3.chat&sz=48" alt="" />
+								<span>T3 Chat</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://chat.openai.com" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=openai.com&sz=48" alt="" />
+								<span>ChatGPT</span>
+							</a>
+						</li>
+					</ul>
 				</div>
-<div class="grid-rows">
-					<div class="grid-heading">
+
+				<div class="bookmark-group">
+					<div class="group-heading">
+						<span class="material-symbols-outlined" aria-hidden="true">terminal</span>
 						<h2>Dev</h2>
 					</div>
-					<a href="https://github.com/" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=github.com&sz=48" />
-						<h3>Github</h3>
-					</a>
-					<a href="https://skool.com/" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=skool.com&sz=48" />
-						<h3>Skool</h3>
-					</a>
-					<a href="https://app.daily.dev/" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=daily.dev&sz=48" />
-						<h3>Daily Dev</h3>
-					</a>
-					<a href="https://ui.shadcn.com/docs" class="grid-element">
-						<img src="https://www.google.com/s2/favicons?domain=shadcn.com&sz=48" />
-						<h3>Shadcn</h3>
-					</a>
+					<ul>
+						<li>
+							<a href="https://github.com/" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=github.com&sz=48" alt="" />
+								<span>Github</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://skool.com/" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=skool.com&sz=48" alt="" />
+								<span>Skool</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://app.daily.dev/" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=daily.dev&sz=48" alt="" />
+								<span>Daily Dev</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://ui.shadcn.com/docs" class="bookmark-link">
+								<img src="https://www.google.com/s2/favicons?domain=shadcn.com&sz=48" alt="" />
+								<span>Shadcn</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</main>
+
 		<script src="main.js"></script>
 	</body>
 </html>
