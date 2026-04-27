@@ -1,39 +1,22 @@
-//const searchForm = document.querySelector("#search");
-//const searchBar = searchForm[0];
-//const searchEngine = "https://google.com/search?q=";
-//searchBar.focus();
-// searchForm.onsubmit = (e) => {
-// 	e.preventDefault();
-// 	const query = searchBar.value.replace(/ /g, "+");
-// 	if (validURL(query)) {
-// 		if (!query.startsWith("https://"))
-// 			return (window.location.href = "https://" + query);
-// 		else window.location.href = query;
-// 	} else return (window.location.href = "" + searchEngine + query);
-// };
-function validURL(str) {
-	var pattern = new RegExp(
-		"^(https?:\\/\\/)?" +
-			"((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" +
-			"((\\d{1,3}\\.){3}\\d{1,3}))" +
-			"(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" +
-			"(\\?[;&a-z\\d%_.~+=-]*)?" +
-			"(\\#[-a-z\\d_]*)?$",
-		"i"
-	);
-	return !!pattern.test(str);
-}
-
 const timeElement = document.querySelector("#time");
-function updateTime() {
-	const date = new Date();
-	var hour = date.getHours().toString();
-	if (hour.length === 1) hour = "0" + hour;
-	var minute = date.getMinutes().toString();
-	if (minute.length === 1) minute = "0" + minute;
-	const seconds = date.getSeconds();
+const dateElement = document.querySelector("#date");
 
-	timeElement.textContent = hour + ":" + minute;
-	setTimeout(updateTime, 1 - seconds);
+function updateClock() {
+	const now = new Date();
+
+	timeElement.textContent = new Intl.DateTimeFormat("en-GB", {
+		hour: "2-digit",
+		minute: "2-digit",
+		hour12: false,
+	}).format(now);
+
+	const month = now.toLocaleString("en-GB", { month: "short" }).toUpperCase();
+	const day = String(now.getDate()).padStart(2, "0");
+	const year = now.getFullYear();
+	dateElement.textContent = `${month}.${day}.${year}`;
+
+	const nextMinute = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
+	window.setTimeout(updateClock, nextMinute);
 }
-updateTime();
+
+updateClock();
