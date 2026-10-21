@@ -1,0 +1,3 @@
+# PR Agent review exclusions; independent of Git tracking and application behavior.
+# No exclusions: current tracked files are readable source, SVG assets and documentation.
+# Use $pragent-ignore to assess generated or unreviewable outputs before adding rules.
