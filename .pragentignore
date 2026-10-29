@@ -1,3 +1,9 @@
 # PR Agent review exclusions; independent of Git tracking and application behavior.
-# No exclusions: current tracked files are readable source, SVG assets and documentation.
 # Use $pragent-ignore to assess generated or unreviewable outputs before adding rules.
+
+# Imported favicon snapshots: validate against their upstream apps and rendered bookmarks.
+# PR Inspector is extracted unchanged from V:/PRInspector/src/server.js (/favicon.svg).
+/icons/pr-inspector.svg
+# Retired PR Agent and Taisor snapshots; their removal is verified with the removed links.
+/icons/pr-agent.svg
+/icons/taisor.svg
